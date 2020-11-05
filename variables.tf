@@ -13,12 +13,9 @@ variable "azure_servicebus_namespace" {
 }
 
 variable "azure_servicebus_sku" {
-  type = map(string)
-  description = "Azure Service Bus Namespace sku."
-  default = {
-    Premium = "Premium"
-    Standard = "Standard"
-  }
+  type = string
+  description = "Azure Service Bus Namespace sku. Supports (Standard/Premium)"
+  default = "Standard"
  }
 variable "azure_resource_tags" {
   type    = map(string)
