@@ -2,7 +2,7 @@
 resource "azurerm_resource_group" "rg" {
   name     = var.azure_resourcegroup
   location = var.azure_location
-  tags     = var.tags
+  tags     = var.azure_resource_tags
 }
 
 # Azure Servicebus Namespace Creation
