@@ -11,7 +11,7 @@ resource "azurerm_servicebus_namespace" "sb" {
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   sku                 = var.azure_servicebus_sku
-  tags                = var.tags
+  tags                = var.azure_resource_tag
 }
 
 # Azure Servicebus Authorization Rule
