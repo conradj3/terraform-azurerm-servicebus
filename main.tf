@@ -16,7 +16,7 @@ resource "azurerm_servicebus_namespace" "sb" {
 
 # Azure Servicebus Authorization Rule
 resource "azurerm_servicebus_namespace_authorization_rule" "sbauth" {
-  name                = format("%S-DefaultAuth",azurerm_servicebus_namespace.sb.name)
+  name                = format("%s-DefaultAuth",azurerm_servicebus_namespace.sb.name)
   namespace_name      = azurerm_servicebus_namespace.sb.name
   resource_group_name = azurerm_resource_group.rg.name
   listen = var.azure_servicebus_auth_listen
