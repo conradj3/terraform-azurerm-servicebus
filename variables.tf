@@ -20,7 +20,10 @@ variable "azure_servicebus_sku" {
 variable "azure_resource_tags" {
   type    = map(string)
   description = "Azure Resource tags."
-  default = {}
+  default = {
+    build = "terraform"
+    provider = "Hashicorp AzureRm"
+  }
 }
 
 variable "azure_servicebus_auth_listen" {
